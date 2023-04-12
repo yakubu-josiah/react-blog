@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Home';
+import Navbar from './Navbar';
 
 function App() {
-  const header = 'Welcome to my Blog Post';
-
 
   return (
     <div className="App">
-      <h1>{ header }</h1>
+      <Navbar />
+      <div className="content">
+        <Home />
+      </div>
     </div>
   );
 }
