@@ -10,6 +10,7 @@
   align-items: center;
   max-width: center;
   margin: 0 auto;
+  border-bottom: #e7e7e7 2px solid;
 }
 
 .navbar h1 {
