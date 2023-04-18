@@ -1,4 +1,8 @@
+
 const Navbar = () => {
+    // const ClickEvents = (key) => {
+    //     alert('You clicked the' + key + ' button');
+    // }
     return (
         <nav className="navbar">
             <h1>Welcome to my Blog</h1>
