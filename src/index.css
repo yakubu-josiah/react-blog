@@ -8,6 +8,7 @@
   display: flex;
   position: relative;
   padding: 1rem;
+  align-items: center;
   justify-content: space-evenly;
   border-bottom: #e7e7e7 2px solid;
 }
