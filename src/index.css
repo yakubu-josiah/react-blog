@@ -5,11 +5,10 @@
 }
 
 .navbar {
-  padding: 20px;
   display: flex;
-  align-items: center;
-  max-width: center;
-  margin: 0 auto;
+  position: relative;
+  padding: 1rem;
+  justify-content: space-evenly;
   border-bottom: #e7e7e7 2px solid;
 }
 
@@ -18,8 +17,17 @@
 }
 
 .navbar .links {
-  margin-left: auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  /* grid-template-columns: repeat(5, 1fr); */
 }
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
 
 .navbar a {
   margin-left: 16px;
@@ -28,7 +36,11 @@
 }
 
 .navbar a:hover {
-  color: #6b2bde;
+  background: #9a6af1;
+  color: #0a0414;
+  border-radius: 5px;
+  padding: 30;
+  transition: all ease-out 0.3s;
 }
 
 .content {
@@ -60,4 +72,5 @@
 .preview-list p span {
   font-style: italic;
   font-weight: 300;
+  opacity: 1;
 }

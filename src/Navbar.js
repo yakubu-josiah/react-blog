@@ -6,16 +6,14 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <h1>Welcome to my Blog</h1>
-            <div className="links">
-                <a href="/" style={{
-                    color: "#fff",
-                    backgroundColor: "#6b2bde",
-                    borderRadius: "5px",
-                    fontSize: "13px"
-                }}>Home</a>
-                <a href="/create">Add New Blog</a>
-                <a href="/show">All Blog Posts</a>
-                <a href="/more">More</a>
+            <div>
+                <ul className="links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/create">Add New Blog</a></li>
+                    <li><a href="/show">All Blog Posts</a></li>
+                    <li><a href="/more">More</a></li>
+                </ul>
+                
             </div>
             
         </nav>
