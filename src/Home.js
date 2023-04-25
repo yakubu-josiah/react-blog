@@ -26,7 +26,7 @@ const Home = () => {
         <div className="mtb">
             <p>{name} and {age}</p>
             <button onClick={quest}> {button} </button>
-            <BlogList post={blog} />     
+            <BlogList posts={blog} header="All Published Post" />     
         </div>
     );
 }
