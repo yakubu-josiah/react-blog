@@ -24,6 +24,8 @@ const Home = () => {
     ]);
 
     function blogDelete(id) {
+        let oldTitle = blog.find(post => post.id === id);
+        alert('You have successfully deleted the ' + oldTitle.title + ' blog.');
         const newBlog = blog.filter(post => post.id !== id);
         setBlog(newBlog);
     } 
