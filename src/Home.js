@@ -22,12 +22,18 @@ const Home = () => {
         { title: 'Third Blog Post', author: 'Issac Newton', id: 3, body: 'lorem ipsum.....' },
 
     ]);
+
+    function blogDelete(id) {
+        const newBlog = blog.filter(post => post.id !== id);
+        setBlog(newBlog);
+    } 
+
+
     return ( 
         <div className="mtb">
             <p>{name} and {age}</p>
             <button onClick={quest}> {button} </button>
-            <BlogList posts={blog} header="All Published Post" />
-            <BlogList posts={blog.filter((post) => post.id === 1)} header="Title me" />     
+            <BlogList posts={blog} header="All Published Post" blogDelete={blogDelete}/>
         </div>
     );
 }

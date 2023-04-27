@@ -77,3 +77,26 @@ ul {
   font-weight: 300;
   opacity: 1;
 }
+
+.blogListing .preview-list button {
+  padding: 2px 16px;
+  margin: 5px 3px;
+  border-radius: 5px;
+}
+
+.blogListing .preview-list .edit {
+  border: 1px solid skyblue;
+  background: skyblue;
+}
+
+.blogListing .preview-list .del {
+  border: 1px solid lightcoral;
+  background: lightcoral;
+}
+
+.blogListing .preview-list > button:hover {
+  border: 1px solid gray;
+  letter-spacing: 1px;
+  transition: all ease-in-out 0.2s;
+  opacity: 0.8;
+}
