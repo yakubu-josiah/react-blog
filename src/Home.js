@@ -26,7 +26,8 @@ const Home = () => {
         <div className="mtb">
             <p>{name} and {age}</p>
             <button onClick={quest}> {button} </button>
-            <BlogList posts={blog} header="All Published Post" />     
+            <BlogList posts={blog} header="All Published Post" />
+            <BlogList posts={blog.filter((post) => post.id === 1)} header="Title me" />     
         </div>
     );
 }
