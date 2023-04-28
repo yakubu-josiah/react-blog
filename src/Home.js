@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogList from "./BlogList";
 
 const Home = () => {
@@ -30,6 +30,11 @@ const Home = () => {
         setBlog(newBlog);
     } 
 
+
+    useEffect(() => {
+      console.log(name); console.log(age);
+    }, [name, age])
+    
 
     return ( 
         <div className="mtb">
