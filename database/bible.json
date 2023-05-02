@@ -1,0 +1,29 @@
+{
+    "bibleVerses": [
+        { 
+            "book": "Genesis",
+            "chapter": 23, 
+            "writer": "Moses", 
+            "verse": "1And Sarah lived for 127 years; these were the years of Sarah’s life.  2 So Sarah died in Kirʹi·ath-arʹba, that is, Hebʹron, in the land of Caʹnaan, and Abraham began to mourn and to weep over Sarah.  3 Then Abraham got up from before his dead wife and he said to the sons of Heth:  4 “I am a foreigner and settler among you. Give me a property to serve as a burial place in your midst so that I may remove my dead for burial.”  5 At this the sons of Heth answered Abraham:  6 “Hear us, my lord. You are a chieftain of God among us. You may bury your dead in the choicest of our burial places. None of us will hold back his burial place from you to prevent you from burying your dead." 
+        },
+        { 
+            "book": "Judges", 
+            "chapter": 10, 
+            "writer": "Samuel", 
+            "verse": "6 Again the Israelites did what was bad in the eyes of Jehovah, and they began to serve the Baʹals, the Ashʹto·reth images, the gods of Aʹram, the gods of Siʹdon, the gods of Moʹab, the gods of the Amʹmon·ites, and the gods of the Phi·lisʹtines. They abandoned Jehovah and did not serve him.  7 Then Jehovah’s anger blazed against Israel, and he sold them into the hands of the Phi·lisʹtines and the Amʹmon·ites.  8 So they crushed and greatly oppressed the Israelites in that year—for 18 years they oppressed all the Israelites on the side of the Jordan that had been the land of the Amʹor·ites in Gilʹe·ad.  9 The Amʹmon·ites would also cross the Jordan to fight against Judah and Benjamin and the house of Eʹphra·im; and Israel was greatly distressed.  10 Then the Israelites called to Jehovah for help, saying: “We have sinned against you, for we abandoned our God and served the Baʹals.” 11 But Jehovah said to the Israelites: “Did I not save you from Egypt and from the Amʹor·ites, the Amʹmon·ites, the Phi·lisʹtines,  12 the Si·doʹni·ans, Amʹa·lek, and Midʹi·an when they oppressed you? When you cried out to me, I saved you out of their hand.  13 But you abandoned me and served other gods. That is why I will not save you again.  14 Go to the gods whom you have chosen and call for help. Let them save you in your time of distress.”  15 But the Israelites said to Jehovah: “We have sinned. Do to us whatever is good in your eyes. Only save us, please, this day.”  16 And they removed the foreign gods from their midst and served Jehovah, so that he could no longer tolerate Israel’s suffering." 
+        },
+        { 
+            "book": "Ecclesiastes", 
+            "chapter": 9, 
+            "writer": "Solomon", 
+            "verse": "9 Rejoice, young man, while you are young, and let your heart be glad in the days of your youth. Follow the ways of your heart and go where your eyes lead you; but know that the true God will bring you into judgment for all these things.  10 So remove troublesome things from your heart, and ward off harmful things from your body, for youth and the prime of life are futility." 
+        },
+        { 
+            "book": "Romans", 
+            "chapter": 14, 
+            "writer": "Paul",
+            "verse": "8 For if we live, we live to Jehovah, and if we die, we die to Jehovah. So both if we live and if we die, we belong to Jehovah.  9 For to this end Christ died and came to life again, so that he might be Lord over both the dead and the living." 
+        }
+    ]
+    
+}
