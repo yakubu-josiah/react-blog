@@ -16,31 +16,30 @@ const Home = () => {
         setButton('Wrong? Update here');
     }
     
-    const [blog, setBlog] = useState([
-        { title: 'First Blog Post', author: 'Micheal Faraday', id: 1, body: 'lorem ipsum.....' },
-        { title: 'Second Blog Post', author: 'Charles Babbage', id: 2, body: 'lorem ipsum.....' },
-        { title: 'Third Blog Post', author: 'Issac Newton', id: 3, body: 'lorem ipsum.....' },
-
-    ]);
+    const [blog, setBlog] = useState(null);
 
     function blogDelete(id) {
-        let oldTitle = blog.find(post => post.id === id);
-        alert('You have successfully deleted the ' + oldTitle.title + ' blog.');
-        const newBlog = blog.filter(post => post.id !== id);
+        let oldTitle = blog.find(post => post.chapter === id);
+        alert('You have successfully deleted ' + oldTitle.writer + '\'s writings. ');
+        const newBlog = blog.filter(post => post.chapter !== id);
         setBlog(newBlog);
     } 
 
 
     useEffect(() => {
-      console.log(name); console.log(age);
-    }, [name, age])
+      fetch('http://localhost:3200/bibleVerses')
+        .then(res => res.json())
+        .then(data => {
+            setBlog(data);
+        });
+    }, [])
     
 
     return ( 
         <div className="mtb">
             <p>{name} and {age}</p>
             <button onClick={quest}> {button} </button>
-            <BlogList posts={blog} header="All Published Post" blogDelete={blogDelete}/>
+            {blog && <BlogList posts={blog} header="My Day-to-Day Bible Read Verses" blogDelete={blogDelete}/>}
         </div>
     );
 }
