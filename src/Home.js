@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
 
@@ -7,8 +8,7 @@ const Home = () => {
     const [name, setName] = useState('Hey you! you skipped telling me your name ');
     const [age, setAge] = useState('your age. Click the button below to fix this.');
     const [button, setButton] = useState('Fix? Click here');
-    const [isLoading, setIsLoading] = useState(true);
-    const [bibErr, setBibErr] = useState(null);
+    
     function quest() {
         let theName = prompt('What\'s your name please?');
         let theAge = prompt('Now tell me your Age');
@@ -17,38 +17,16 @@ const Home = () => {
         setAge('it is good to know that you\'re ' + theAge + 'years old.' || ' ');
         setButton('Wrong? Update here');
     }
+    const {data: bible, isLoading, error: bibErr} = useFetch('http://localhost:3210/bibleVerses');
     
-    const [blog, setBlog] = useState(null);
-
     function blogDelete(id) {
-        let oldTitle = blog.find(post => post.chapter === id);
+        let oldTitle = bible.find(post => post.chapter === id);
         alert('You have successfully deleted ' + oldTitle.writer + '\'s writings. ');
-        const newBlog = blog.filter(post => post.chapter !== id);
-        setBlog(newBlog);
-        setIsLoading(false);
+        const newBlog = bible.filter(post => post.chapter !== id);
+        // setData(newBlog);
+        // setIsLoading(false);
     } 
 
-
-    useEffect(() => {
-      fetch('http://localhost:3210/bibleVerses')
-        .then(res => {
-            if (!res.ok) {
-                throw Error('Couldn\'t fetch data! Please refresh page server is down...');
-            }
-            return res.json();
-        })
-        .then(data => {
-            setInterval(() => {
-                setBlog(data);
-                setBibErr(null);
-                setIsLoading(false);
-            }, 1000);
-        })
-        .catch(err => {
-            setBibErr(err.message);
-            setIsLoading(false);
-        })
-    }, [])
     
 
     return ( 
@@ -69,7 +47,7 @@ const Home = () => {
                 </div>
                 
             }
-            {blog && <BlogList posts={blog} header="My Day-to-Day Bible Read Verses" blogDelete={blogDelete}/>}
+            { bible && <BlogList posts={bible} header="My Day-to-Day Bible Read Verses" blogDelete={blogDelete}/> }
         </div>
     );
 }
