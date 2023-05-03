@@ -101,3 +101,76 @@ ul {
   transition: all ease-in-out 0.2s;
   opacity: 0.8;
 }
+
+.loader {
+  width: 900px;
+  margin-top: 30px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #3b3a3a 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: auto;
+  position: relative;
+}
+
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+  100% {
+    background-position: 800px 0
+  }
+}
+
+.loader .aniMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, .2);
+  background-repeat: no-repeat;
+  animation-name: placeHolderShimmer;
+  
+  background-image:
+    radial-gradient(lightcoral 2px, lightgray 99%, transparent 0),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(lightgray, rgb(21, 103, 209)),
+    linear-gradient(lightgray, rgb(211, 211, 211)),
+    linear-gradient(lightgray, rgb(134, 176, 231)),
+    linear-gradient(#fff, #e2e9ecbd); 
+  
+  background-size:
+    32px 32px,
+    200px 32px,
+    280px 24px,
+    430px 36px,
+    570px 40px,
+    100% 100%;
+  
+  background-position:
+    24px 30px,
+    66px 30px,
+    24px 90px,
+    24px 142px,
+    24px 205px,
+    0 0;
+}
+
+.loader .aniMe p {
+  color: #979191;
+  font-size: 30px;
+  font-weight: 700;
+  /* background: linear-gradient(to right, #eeeeee, #9e9999 , #eeeeee); */
+  margin-top: 50px;
+  text-align: center;
+}
