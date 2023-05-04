@@ -23,8 +23,8 @@ const Home = () => {
         let oldTitle = bible.find(post => post.chapter === id);
         alert('You have successfully deleted ' + oldTitle.writer + '\'s writings. ');
         const newBlog = bible.filter(post => post.chapter !== id);
-        // setData(newBlog);
-        // setIsLoading(false);
+        // setData(newBlog); This will go in the useEffect dependency array since state changes with time
+        // setIsLoading(false); This will also be a useEffect dependency arrary
     } 
 
     
