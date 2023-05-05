@@ -1,6 +1,9 @@
-import Navbar from './Navbar';
-import Home from './Home';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom/cjs/react-router-dom.min'; 
+import { BrowserRouter as Router,  Switch, Route } from 'react-router-dom/cjs/react-router-dom.min';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Library from './components/Library';
+import Tools from './components/StudyTool';
+import More from './components/LearnMore';
 
 
 function App() {
@@ -8,14 +11,14 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-          <div className="content">
-            <Switch> 
-              <Route path="/">
-                <Home />
-             </Route>
-             </Switch>
-            {/* <Home /> */}
-          </div>
+        <div className="content">
+          <Switch>
+            <Route exact path="/" component={ Home } />
+            <Route path="/library" component={ Library }/>
+            <Route path="/tools" component={ Tools } />
+            <Route path="/more" component={ More } />
+          </Switch>
+        </div>
       </div>
     </Router>
   );
