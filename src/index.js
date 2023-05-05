@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Home from './Home';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +11,6 @@ root.render(
     
     <App />
     <div className="mx">
-      <Home />
     </div>
   </React.StrictMode>
 );
