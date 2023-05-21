@@ -17,8 +17,8 @@ const useFetch = (url) => {
             .then(data => {
                 setInterval(() => {
                     setData(data);
-                    setError(null);
                     setIsLoading(false);
+                    setError(null);
                 }, 1000);
             })
             .catch(err => {

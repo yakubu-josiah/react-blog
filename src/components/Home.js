@@ -17,7 +17,7 @@ const Home = () => {
         setAge('it is good to know that you\'re ' + theAge + 'years old.' || ' ');
         setButton('Wrong? Update here');
     }
-    const {data: bible, isLoading, error: bibErr} = useFetch('http://localhost:3210/bibleVerses');
+    const {data: bible, isLoading, error: bibErr} = useFetch('http://localhost:3200/bibleVerses');
     
     function blogDelete(id) {
         let oldTitle = bible.find(post => post.chapter === id);
@@ -35,6 +35,8 @@ const Home = () => {
             <button onClick={quest}> {button} </button>
             { bibErr && 
                 <div className="loader">
+                    <div className="aniMe"><p>{ bibErr }</p></div>
+                    <div className="aniMe"><p>{ bibErr }</p></div>
                     <div className="aniMe"><p>{ bibErr }</p></div>
                 </div>
                 
