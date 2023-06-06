@@ -4,6 +4,10 @@
   color: #333;
 }
 
+body {
+  color: #8b8b8b;
+}
+
 .navbar {
   display: flex;
   position: relative;
@@ -31,6 +35,7 @@ ul {
 
 
 .navbar a {
+  color: #808080;
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
@@ -50,16 +55,20 @@ ul {
 }
 
 .mtb {
-  margin: 20px 30px;
+  margin: 20px 100px;
 }
 .mtb h1 {
   padding-top: 20px;
 }
 .preview-list {
-  max-width: 650px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  /* max-width: 650px; */
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
+  
 }
 
 .preview-list:hover {
@@ -72,10 +81,21 @@ ul {
   margin-bottom: 8px;
 }
 
-.preview-list p span {
+.preview-list p, span{
+  color: #808080;
+  font-size: smaller;
   font-style: italic;
+}
+
+.preview-list p span {
+  font-size: 15px;
+  font-style: normal;
   font-weight: 300;
   opacity: 1;
+}
+
+.blogListing {
+  margin: auto 60px;
 }
 
 .blogListing .preview-list button {
@@ -87,11 +107,13 @@ ul {
 
 .blogListing .preview-list .edit {
   border: 1px solid skyblue;
+  color: #5e5b5b;
   background: skyblue;
 }
 
 .blogListing .preview-list .del {
   border: 1px solid lightcoral;
+  color: #5e5b5b;
   background: lightcoral;
 }
 
@@ -100,6 +122,11 @@ ul {
   letter-spacing: 0.2px;
   transition: all ease-in-out 0.2s;
   opacity: 0.8;
+}
+
+.blogBtn{
+  display: flex;
+  align-items: center;
 }
 
 .loader {
