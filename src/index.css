@@ -130,8 +130,8 @@ ul {
 }
 
 .loader {
-  width: 900px;
-  margin-top: 30px;
+  width: 80%;
+  margin: 20px 0;
   display: block;
   justify-content: center;
   align-items: center;
