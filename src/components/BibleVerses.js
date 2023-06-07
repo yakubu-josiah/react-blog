@@ -1,27 +1,45 @@
-// import { useState } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import useFetch from "../useFetch";
 
 // const [bible, setBible] = useState('Request For Bible Verses Now');
 
+// All of this isn't needed to fetch data because the useFetch is configured...
+// function getBible(req) {
+//     const bibleRequest = new XMLHttpRequest();
+//     if (bibleRequest.readyState === 4 && bibleRequest.status === 200) {
+//         const data = JSON.parse(bibleRequest.responseText);
+//         console.log(useState(data));
+//     } else if (bibleRequest.readyState === 4) {
+//         const err = 'Oops!! Couldn\'t process your request';
+//         console.log(useState(err));
+//     }
 
-function getBible(req) {
-    const bibleRequest = new XMLHttpRequest();
-    if (bibleRequest.readyState === 4 && bibleRequest.status === 200) {
-        const data = JSON.parse(bibleRequest.responseText);
-        console.log(useState(data));
-    } else if (bibleRequest.readyState === 4) {
-        const err = 'Oops!! Couldn\'t process your request';
-        console.log(useState(err));
-    }
+//     bibleRequest.open('GET', 'database/bible.json');
+//     bibleRequest.send();
 
-    bibleRequest.open('GET', 'database/bible.json');
-    bibleRequest.send();
-
-}
+// }
 const Bible = () => {
+    const { id } = useParams();
+    const { data: bible, isLoading, error } = useFetch("http://localhost:3200/bibleVerses/" + id)
     return (
-        <div className="preview-list">
-            {/* <p>{ bible }</p>
-            <button readystatechange={() => getBible(err, data)}>Request Scriptures</button> */}
+        <div className="mtb">
+            {/* <div className="preview-list"> */}
+                { error && 
+                    <div className="loader">
+                        <div className="loader-single"><p>{ error }</p></div>
+                    </div>
+                    
+                }
+                { isLoading && 
+                    <div className="loader">
+                        <div className="loader-single"><p> Loading...</p></div>
+                    </div>
+                    
+                }
+                { bible && 
+                    <p>Here's the { bible.writer } </p>
+                }
+            {/* </div> */}
         </div>
     );
 }

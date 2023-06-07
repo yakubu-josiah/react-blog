@@ -95,7 +95,7 @@ ul {
 }
 
 .blogListing {
-  margin: auto 60px;
+  margin: auto 0;
 }
 
 .blogListing .preview-list button {
@@ -109,9 +109,11 @@ ul {
   border: 1px solid skyblue;
   color: #5e5b5b;
   background: skyblue;
+  cursor: pointer;
 }
 
 .blogListing .preview-list .del {
+  cursor: pointer;
   border: 1px solid lightcoral;
   color: #5e5b5b;
   background: lightcoral;
@@ -128,10 +130,44 @@ ul {
   display: flex;
   align-items: center;
 }
+.loader-single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 282px;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  animation-name: placeHolderShimmer;
+  
+  background-image:
+    radial-gradient( lightgray 99%, lightcoral 4px, transparent 0),
+    linear-gradient(#d4d4da,#8f81f5ce ),
+    linear-gradient(lightgray, rgb(131, 171, 223)),
+    linear-gradient(lightgray, rgb(211, 211, 211)),
+    linear-gradient(lightgray, lightgray),
+    linear-gradient(#fff, #e2e9ecbd); 
+  
+  background-size:
+  184px 20px,
+  355px 20px,
+  660px 41px,
+  720px 43px,
+  783px 43px,
+  100% 98%;
+  
+  background-position:
+    734px 18px,
+    30px 18px,
+    30px 79px,
+    24px 141px,
+    24px 205px,
+    0 0
+}
 
 .loader {
   width: 80%;
-  margin: 20px 0;
+  margin: auto;
   display: block;
   justify-content: center;
   align-items: center;
@@ -147,7 +183,6 @@ ul {
   height: auto;
   position: relative;
 }
-
 
 @keyframes placeHolderShimmer {
   0% {
