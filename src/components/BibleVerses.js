@@ -37,7 +37,18 @@ const Bible = () => {
                     
                 }
                 { bible && 
-                    <p>Here's the { bible.writer } </p>
+                    <div className="blogCont">
+                        <div className="writer">
+                            <p>Here's the { bible.writer } </p>
+                            <p>Date here </p>
+                        </div>
+                        <div className="verse">
+                            <article>
+                                <p>The verses here...</p>
+                                <p>The verses here...</p>
+                            </article>
+                        </div>
+                    </div>
                 }
             {/* </div> */}
         </div>

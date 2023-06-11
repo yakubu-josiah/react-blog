@@ -167,7 +167,6 @@ ul {
 
 .loader {
   width: 80%;
-  margin: auto;
   display: block;
   justify-content: center;
   align-items: center;
@@ -235,4 +234,13 @@ ul {
   /* background: linear-gradient(to right, #eeeeee, #9e9999 , #eeeeee); */
   margin-top: 50px;
   text-align: center;
+}
+
+.blogCont .writer {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+.blogCont .writer +_p {
+  color: blue;
 }
