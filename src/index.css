@@ -16,7 +16,9 @@ body {
   justify-content: space-evenly;
   border-bottom: #e7e7e7 2px solid;
 }
-
+.navbar + a:hover {
+  background: green;
+}
 .navbar h1 {
   color: #6b2bde;
 }
@@ -41,7 +43,7 @@ ul {
   padding: 6px;
 }
 
-.navbar a:hover {
+.navbar div a:hover {
   background: #6822e973;
   color: #0a0414;
   border-radius: 5px;
