@@ -1,9 +1,9 @@
 import { BrowserRouter as Router,  Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Library from './components/Library';
-import Tools from './components/StudyTool';
-import More from './components/LearnMore';
+import Home from './pages/Home';
+import Library from './pages/Library';
+import Tools from './pages/StudyTool';
+import More from './pages/LearnMore';
 import BibleView from './components/BibleVerses'
 
 function App() {
